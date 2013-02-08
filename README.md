@@ -1,6 +1,6 @@
-booze-catz
+caturday
 ==========
 
-Detects red Solo cups with openCV and replaces them with wonderful cats.
+Because what day isn't better with cats?
 
-Who doesn't love a party with cats?
+A DevFest 2013 project.
