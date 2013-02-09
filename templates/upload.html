@@ -18,7 +18,7 @@ $(document).ready(function() {
 			console.log("Store successful:", JSON.stringify(FPFile));
 			 
 			$.ajax({
-				type: "POST",
+				type: "GET",
 				url: '/photo',
 				data: {"url" : FPFile["url"]},
 			})

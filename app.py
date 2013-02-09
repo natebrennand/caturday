@@ -26,7 +26,7 @@ def photo():
 	command = "fd.sh "+url		#awesome programming
 	system( command )
 	print url	# WORKS!!!!!
-	sleep(.5)
+	sleep(3.5)
 	return render_template('photo.html',
 		url = '/var/www/imgs/final.jpg')
 
