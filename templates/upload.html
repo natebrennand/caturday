@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+
+{% block script %}
+<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+
+<script type="text/javascript">
+//Run after the page loads
+filepicker.setKey("{{filekey}}");
+$(document).ready(function() {
+	filepicker.pick({
+		mimetypes: ['image/*', 'text/plain'],
+		container: 'modal',
+		services:['COMPUTER', 'FACEBOOK', 'DROPBOX', 'INSTAGRAM', 'WEBCAM'],
+	}, function(FPFile){
+		console.log(JSON.stringify(FPFile));
+		filepicker.store(FPFile, {filename: '{{id}}.jpg', locations: 'S3', path: '/tmp/{{id}}.jpg'}, function(FPFile){
+			console.log("Store successful:", JSON.stringify(FPFile));
+		}, function(FPError) {
+			console.log(FPError.toString());
+		}, function(progress) {
+			console.log("Loading: "+progress+"%");
+		});
+	}, function(FPError){
+		console.log(FPError.toString());
+	});
+
+console.log("filepicker ran");
+
+});
+</script>
+{% endblock %}
+
+
+{% block title %}
+Upload a Photo!
+{% endblock %}
+
+
+{% block body %}
+<br><br>	<!--This is what happens when I try frontend...-->
+<a href="../upload" class="myButton">Upload a photo!</a>
+{% endblock %}
