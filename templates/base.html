@@ -1,71 +1,71 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Booze Catz</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Booze Catz">
-    <meta name="author" content="Nate Brennand">
+<head>
+  <meta charset="utf-8">
+  <title>Booze Catz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Booze Catz">
+  <meta name="author" content="Nate Brennand">
 
-    <!-- CSS -->
-    <link href="../static/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="../static/assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="../static/assets/css/style.css" rel="stylesheet">
+  <!-- CSS -->
+  <link href="../static/assets/css/bootstrap.css" rel="stylesheet">
+  <link href="../static/assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../static/assets/css/style.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+      <![endif]-->
 
-    <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="../assets/ico/favicon.png">
-  </head>
+      <!-- Fav and touch icons -->
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    </head>
 
-  <body>
+    <body>
 
-    <div class="page-header" id='maroon-pink'>
+      <div class="page-header" id='maroon-pink'>
         <header class="container">
           <h1>
-            {% block h1 %}
+            {% block title %}
             {% endblock %}  
           </h1>
         </header>
-        </div>
-
-    <!-- Part 1: Wrap all page content here -->
-    <div id="wrap">
-      <!-- Begin page content -->
-      <div class="container">
-        
       </div>
-      <div class="container" id='header-pad'>
-        <p class="lead">
+
+      <!-- Part 1: Wrap all page content here -->
+      <div id="wrap">
+        <!-- Begin page content -->
+        <div class="container">
+          
+        </div>
+        <div class="container" id='header-pad'>
+          <p class="lead">
             {% block body %}
             {% endblock %}
-        </p>
+          </p>
+        </div>
+
+        <div id="push"></div>
       </div>
 
-      <div id="push"></div>
-    </div>
-
-    <div id="footer">
-      <div class="container">
-        <p class="muted credit">
-          Caturday, a DevFest 2013 project by <a href="https://github.com/nsb2142">Nate Brennand</a> and <a href="https://github.com/wordnumber">Christopher Yan</a>
-        </p>
+      <div id="footer">
+        <div class="container">
+          <p class="muted credit">
+            Caturday, a DevFest 2013 project by <a href="https://github.com/nsb2142">Nate Brennand</a> and <a href="https://github.com/wordnumber">Christopher Yan</a>
+          </p>
+        </div>
       </div>
-    </div>
 
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../assets/js/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
     <script src="../assets/js/bootstrap-transition.js"></script>
     <script src="../assets/js/bootstrap-alert.js"></script>
     <script src="../assets/js/bootstrap-modal.js"></script>
@@ -79,5 +79,8 @@
     <script src="../assets/js/bootstrap-carousel.js"></script>
     <script src="../assets/js/bootstrap-typeahead.js"></script>
 
+    {% block script %}
+    {% endblock %}
+
   </body>
-</html>
+  </html>
