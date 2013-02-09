@@ -23,7 +23,7 @@ def upload():
 @app.route('/photo', methods=['POST'])
 def photo():
 	url = request.form['url']
-	command = "fd.sh",url		#awesome programming
+	command = str("fd.sh",url)		#awesome programming
 	system( command )
 	print url	# WORKS!!!!!
 	sleep(.5)
