@@ -13,7 +13,6 @@ def upload():
 	return render_template('upload.html',
 			filekey = filepicker)
 
-
 @app.route('/')
 def index():
 	return render_template('index.html')
