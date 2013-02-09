@@ -1,9 +1,11 @@
 
+
 html,
 body {
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
 }
+
 /* Wrapper for page content to push down footer */
 #wrap {
 	min-height: 100%;
@@ -17,9 +19,7 @@ body {
 #footer {
 	height: 60px;
 }
-#footer {
-	background-color: #f5f5f5;
-}
+
 
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
@@ -39,3 +39,24 @@ body {
 .container .credit {
 	margin: 20px 0;
 }
+
+
+/* COLOR
+Cornucopia Palette
+http://www.colourlovers.com/palette/2669359/LiveAsWeDreamAlone
+
+main red		#9B0231
+pinkish			#B8154E
+maroon-pink		#B57283
+light teal 		#AED0C0
+ocean			#94BBB6
+
+*/
+
+.page-header {
+	background-color: #B57283;
+}
+#footer {
+	background-color: #AED0C0;
+}
+
