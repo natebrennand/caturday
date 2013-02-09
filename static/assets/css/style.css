@@ -20,6 +20,20 @@ body {
 	height: 60px;
 }
 
+.page-header {
+	width: 100%;
+	margin-top: 0;
+	position: absolute;
+}
+#header-pad {
+	padding-top: 70px;
+}
+
+
+header {
+	margin: 0 auto;
+}
+
 
 /* Lastly, apply responsive CSS fixes as necessary */
 @media (max-width: 767px) {
@@ -52,11 +66,24 @@ light teal 		#AED0C0
 ocean			#94BBB6
 
 */
-
-.page-header {
-	background-color: #B57283;
-}
 #footer {
 	background-color: #AED0C0;
 }
 
+
+
+#main-red {	
+	background-color: #9B0231;
+}
+#pinkish {	
+	background-color: #B8154E;
+}
+#maroon-pink {	
+	background-color: #B57283;
+}
+#light-teal {	
+	background-color: #AED0C0;
+}
+#ocean {	
+	background-color: #94BBB6;
+}
