@@ -16,6 +16,12 @@ $(document).ready(function() {
 		console.log(JSON.stringify(FPFile));
 		filepicker.store(FPFile, {filename: '{{id}}.jpg', locations: 'S3', path: '/tmp/{{id}}.jpg'}, function(FPFile){
 			console.log("Store successful:", JSON.stringify(FPFile));
+			 
+			$.ajax({
+				type: "POST",
+				url: '/photo',
+				data: {"url" : FPFile["url"]},
+			})
 		}, function(FPError) {
 			console.log(FPError.toString());
 		}, function(progress) {

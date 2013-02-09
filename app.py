@@ -1,7 +1,10 @@
 
-from flask import Flask, render_template, request, redirect
-from credentials import filepicker
-from random import random
+from flask 			import Flask, render_template, request, redirect
+from credentials 	import filepicker
+from random 		import random
+from time 			import sleep
+from os				import system
+
 
 app = Flask(__name__)
 
@@ -16,16 +19,23 @@ def upload():
 		filekey = filepicker,
 		id = random_id)
 
-@app.route('/photo')
-@app.route('/photo/<photo_id>')
-def photo( photo_id = 'FvnGx5agRwCEIWnat6W9'):
+
+@app.route('/photo', methods=['POST'])
+def photo():
+	url = request.form['url']
+	command = "fd.sh",url		#awesome programming
+	system( command )
+	print url	# WORKS!!!!!
+	sleep(.5)
 	return render_template('photo.html',
-		url = photo_id)
+		url = '/var/www/imgs/final.jpg')
 
 
 @app.route('/')
 def index():
 	return render_template('index.html')
+
+
 
 if __name__ == '__main__':
 	app.debug = True
